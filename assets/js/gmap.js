@@ -1,21 +1,21 @@
-      // If you're adding a number of markers, you may want to drop them on the map
+// If you're adding a number of markers, you may want to drop them on the map
+//
       // consecutively rather than all at once. This example shows how to use
       // window.setTimeout() to space your markers' animation.
 
       var neighborhoods = [
-        {lat: 52.511, lng: 13.447},
-        {lat: 52.549, lng: 13.422},
-        {lat: 52.497, lng: 13.396},
-        {lat: 52.517, lng: 13.394},
-        {lat: 52.511, lng: 13.447},
-        {lat: 52.549, lng: 13.422},
-        {lat: 52.497, lng: 13.396},
-        {lat: 52.517, lng: 13.394}
+
+        {lat: 42.35226657107633, lng: -71.06815944523866},
+        {lat: 42.36726657107633, lng: -71.08935944523866},
+        {lat: 42.35926657107633, lng: -71.05835944523866},
+
+
 
       ];
 
-      neighborhoods = generateRandomPoints({'lat':42.3601, 'lng':-71.0589}, 100, 10);
-      
+      //neighborhoods = generateRandomPoints({'lat':42.3601, 'lng':-71.0589}, 500, 10);
+
+      console.log(neighborhoods)
 
       var markers = [];
       var map;
@@ -25,61 +25,90 @@
           zoom: 13,
           center: {lat: 42.3601, lng: -71.0589},
          styles:
-         
-[
-    {
-        "elementType": "labels",
-        "stylers": [
+
+        [
             {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
             },
             {
-                "color": "#000000"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "stylers": [
-            {
-                "color": "#ffffff"
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
             },
             {
-                "visibility": "on"
-            }
-        ]
-    },
-    {}
-]         });
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#000000"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {}
+        ]         });
 
       google.maps.event.addListenerOnce(map, 'idle', function(){
     // do something only the first time the map is loaded
             //drop() 
+            loaded = true;
       });
-        
-      }
+
+  }
+
+let loaded = false; 
+
+var scrollEventHandler = function() {
+	if(isScrolledIntoView(document.getElementById('map')) && loaded) {
+    //$('.some-text').text('Scolled completely into view');
+    drop(); 
+    unbindScrollEventHandler();
+  } else {
+    //$('.some-text').text('Some text');
+  }  
+}
+
+function unbindScrollEventHandler() {
+	$(document).unbind('scroll', scrollEventHandler);
+}
+
+$(document).scroll(scrollEventHandler);
+
+function isScrolledIntoView(el) {
+    var elemTop = el.getBoundingClientRect().top;
+    var elemBottom = el.getBoundingClientRect().bottom;
+    //var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    var halfVisible = (elemBottom - (elemBottom - elemTop)/2)  <= window.innerHeight 
+    return halfVisible;
+}
+
+
 
       function drop() {
         clearMarkers();
         for (var i = 0; i < neighborhoods.length; i++) {
-          addMarkerWithTimeout(neighborhoods[i], i * 500+1000);
+          addMarkerWithTimeout(neighborhoods[i], i * 150+0);
         }
       }
 
@@ -152,4 +181,4 @@ function generateRandomPoint(center, radius) {
 //var randomGeoPoints = generateRandomPoints({'lat':42.3601, 'lng':-71.0589}, 10000, 10);
 
 
-      
+
