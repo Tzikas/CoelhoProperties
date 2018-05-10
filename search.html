@@ -1,83 +1,102 @@
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css">
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.css">
-<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.js"></script>
-<script language="javascript" src="./PropertySearch_files/soldSearch.js"></script>
--->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
 
-<link rel="stylesheet" href="assets/css/modal.css" />
 
 <div id="modal-container">
   <div class="modal-background">
-    <div class="modal">
+    <div class="modal style5">
       <h2>I'm a Moda</h2>
       <p>Hear me roar.</p>
-      <span class="x">X</span>
+      <span class="close x"></span>
       <!--<svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none"><rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect></svg>-->
 
-      <div class="select-wrapper">
-	<select  name="twn" multiple=""  name="demo-category" id="demo-category" class="chosen">
-	  <option value="">- Category -</option>
-	  <option value="1">Manufacturing</option>
-	  <option value="1">Shipping</option>
-	  <option value="1">Administration</option>
-	  <option value="1">Human Resources</option>
-	</select>
-      </div>
+      <form action="http://idx.mlspin.com/rslts.asp" method="get" id="formId" target="_blank" onsubmit="return Form_Validator(this)" name="TheForm" language="JavaScript">
 
-      <div class="house-types">
-	<div>
-	  <span>
-	   <input type="checkbox" id="a" name="a">
-	   <label for="a">Single Family</label>
-	 </span>
-	  <span>
-	   <input type="checkbox" id="b" name="b">
-	   <label for="b">Email me a copy</label>
-	 </span>
-	  <span>
-	   <input type="checkbox" id="demo-copy" name="demo-copy">
-	   <label for="demo-copy">Email me a copy</label>
-	 </span>
-	  <span>
-	   <input type="checkbox" id="demo-copy" name="demo-copy">
-	   <label for="demo-copy">Email me a copy</label>
-	 </span>
-	</div>
-	<div>
-	  <span>
-	   <input type="checkbox" id="demo-copy" name="demo-copy">
-	   <label for="demo-copy">Single Family</label>
-	 </span>
-	  <span>
-	   <input type="checkbox" id="demo-copy" name="demo-copy">
-	   <label for="demo-copy">Email me a copy</label>
-	 </span>
-	  <span>
-	   <input type="checkbox" id="demo-copy" name="demo-copy">
-	   <label for="demo-copy">Email me a copy</label>
-	 </span>
-	  <span>
-	   <input type="checkbox" id="demo-copy" name="demo-copy">
-	   <label for="demo-copy">Email me a copy</label>
-	 </span>
-	</div>
-      </div>
 
-    <button href="#" class="button special fit">Submit</button>
-      
+	<input type="hidden" name="aid" value="CN211748" /> 
+	<input type="hidden" name="id" value="59121" /> 
+
+	<div class="slyder"> 
+	  <div id="keypress"></div>
+	  <input type="text" name="min" class="SearchBox" id="input-with-keypress-0" />
+	  <input type="text" name="max" class="SearchBox" id="input-with-keypress-1" />
+	</div>
+
+	<div class="select-wrapper">
+	  <select  name="twn" multiple=""  id="demo-category" class="chosen" required>
+	    <option value="WRTH">Wrentham, MA</option>
+	    <option value="42M">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wrentham, MA-Sheldonville </option>
+	    <option value="42O">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wrentham, MA-Wampum </option>
+	    <option value="42N">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wrentham, MA-West Wrentham </option>
+	    <option value="YARM">Yarmouth, MA</option>
+	    <option value="BAS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yarmouth, MA-Bass River</option>
+	    <option value="42P">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yarmouth, MA-Point Gammon </option>
+	    <option value="SYA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yarmouth, MA-South Yarmouth</option>
+	    <option value="WYA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yarmouth, MA-West Yarmouth</option>
+	    <option value="YAR">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yarmouth, MA-Yarmouth (village)</option>
+	    <option value="YPT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yarmouth, MA-Yarmouth Port</option>
+
+
+	  </select>
+	</div>
+
+	<div class="house-types">
+	  <div>
+	    <span>
+	      <input type="checkbox" id="SF" name="type" value="SF" checked>
+	      <label for="SF">Single Family</label>
+	    </span>
+	    <span>
+	      <input type="checkbox" id="CC" name="type" value="CC" checked>
+	      <label for="CC">Condiminium</label>
+	    </span>
+	    <span>
+	      <input type="checkbox" id="MF" name="type" value="MF" checked>
+	      <label for="MF">Multi Family</label>
+	    </span>
+	    <span>
+	      <input type="checkbox" id="LD" name="type" value="LD" checked>
+	      <label for="LD">Land</label>
+	    </span>
+	  </div>
+	  <div>
+	    <span>
+	      <input type="checkbox" id="CI" name="type" value="CI" checked>
+	      <label for="CI">Commercial</label>
+	    </span>
+	    <span>
+	      <input type="checkbox" id="BU" name="type" value="BU" checked>
+	      <label for="BU">Business Opp.</label>
+	    </span>
+	    <span>
+	      <input type="checkbox" id="RN" name="type" value="RN" checked>
+	      <label for="RN">Rental</label>
+	    </span>
+	    <span>
+	      <input type="checkbox" id="MH" name="type" value="MH" checked>
+	      <label for="MH">Mobile Home</label>
+	    </span>
+	  </div>
+	</div>
+
+	<!--<button href="#" class="button special fit">Submit</button>-->
+	<input type="submit" id="subButton" value=" Search for Property " class="SearchBox button special fit"/>
+      </form>
+
     </div>
 
   </div>
 </div>
 <div class="content">
   <div class="buttons">
-    <div id="one" class="button special">Unfolding</div>
+    <div id="one" class="button special icon fa-search">Search</div>
   </div>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+<!--<script language="javascript" src="./PropertySearch_files/soldSearch.js"></script>-->
 <script src="./search.js"></script>
 
 

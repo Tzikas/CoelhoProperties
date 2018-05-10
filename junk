@@ -1,0 +1,10 @@
+<head><link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.11/css/all.css' integrity='sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/' crossorigin='anonymous'><style>#nav{text-align:center;margin:6px 0 8px}#nav a{font-size:2em;opacity:.5;outline:0;width:1.5em;height:1.5em;line-height:1.35em;margin:0 .25em}#nav a:active{opacity:1}#nav a span{display:none}table{width: 100%;}</style></head>
+
+<div id='wrapper'><nav id='nav'><a href='https://tzikas.github.io/pinergy' class='icon fas fa-home active'><span>Home</span></a><a href='#work' class='icon fas fa-folder'><span>Work</span></a><a href='#contact' class='icon fas fa-envelope'><span>Contact</span></a><a href='#' class='icon fas fa-twitter'><span>Twitter</span></a></nav></wrapper>
+
+<div style='color:purple'>Coelho Properites</div>
+<img src='https://www.w3schools.com/tags/smiley.gif'>
+<a href='http://tzikas.github.io/'>Me</a>
+<div style='color:green'>Coelho Properitesss</div>
+
+

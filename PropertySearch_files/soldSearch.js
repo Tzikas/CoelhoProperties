@@ -1,6 +1,8 @@
 // 4835 - SLD listings on IDX
+console.log('adfasdf')
 
 function IdxLoadSldSearchParams(id) {
+    alert(id)
     var selFrame;
     selFrame = document.getElementById("optTimeFrame");
 
