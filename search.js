@@ -113,6 +113,14 @@ function Form_Validator(theForm) {
           theForm.twn.focus();
           return (false);
         }
+
+      /*let checked = $("input[type=type]:checked").length;
+
+      if(!checked) {
+        alert("You must check at least one checkbox.");
+        return false;
+      }*/
+      
         return (true);
 //  },333)(theForm)
 }
@@ -219,7 +227,22 @@ $(document).ready(function(){
   });
 
 
+
+
   $(".chosen").chosen();
+
+  $('select').css({
+    display: "block",
+    opacity: 0,
+    top: "1em",
+    position: "absolute"
+  })
+
+
+    /*display: block;
+    opacity: 0;
+    top: 1em;
+    position: absolute;*/
 
   
   $('div#one.button').click(function(){
@@ -267,6 +290,13 @@ Number.prototype.formatMoney = function(c, d, t){
  };
 
 //})
+
+window.addEventListener('error', function(event) { 
+
+  console.log('event',event) 
+})
+
+
 
 
 /*

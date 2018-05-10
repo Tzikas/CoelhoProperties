@@ -263,10 +263,13 @@ html.modal-active, body.modal-active {
 }
 .house-types div{
   text-align:left;
-  float:left; 
+  float:left;
 }
 .house-types span{
   display:grid;
+}
+.house-types div:nth-child(2){
+  margin-bottom: 1em;
 }
 
 
@@ -772,34 +775,7 @@ input.SearchBox{
   width: 7em;
 }
 
-video{
-  width:50%; 
-}
-#video{
-  width:100%;
-  text-align:center;
-  background:white;
-  padding:0 100px 100px;  
-
+label{
+  margin: 0 0 0em 0
 }
 
-
-@media screen and (max-width: 736px){
-  video{
-    width:100%;
-  }
-  #video{
-    padding:0;
-  }
-}
-
-
-
-
-
-#main > header{
-  background:url('../../images/biz-banner.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:bottom;
-}

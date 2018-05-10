@@ -8,3 +8,8 @@
 <div style='color:green'>Coelho Properitesss</div>
 
 
+
+
+<style>header{-moz-transition:background-color0.2sease;-webkit-transition:background-color0.2sease;-ms-transition:background-color0.2sease;transition:background-color0.2sease;background:#2e3842;height:3em;left:0;line-height:3em;position:fixed;top:0;width:100%;z-index:10000;}a{color:white!important;font-family:Verdana!important;text-decoration:none!important;font-size:16px!important;margin-left:10px;}h1{margin:0}</style><header id='header' class='alt'><h1><a href='index.html'>Coelho Properties</a></h1></header>
+
+

@@ -36,10 +36,7 @@ span.image.fit:hover::before {
     background: rgba(0,0,0,0.5);
 }
 
-.mylivechat_collapsed_text,
-.mylivechat_expanded_text{
-    background: #2e3842 !important;
-}
+
 /*
 #floating-panel {
 position: absolute;

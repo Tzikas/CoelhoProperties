@@ -145,9 +145,6 @@ function generateRandomPoint(center, radius) {
   return {'lat': y+y0, 'lng': xp+x0};
 }
 
-function add_chatinline(){var hccid=82381135;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
-add_chatinline();
-
 //          center: {lat: 42.3601, lng: -71.0589}
 
 // Usage Example.
