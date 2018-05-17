@@ -39,6 +39,7 @@ html.modal-active, body.modal-active {
 }
 #modal-container.one .modal-background .modal {
   transform: scale(0);
+  background: white; 
   animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.one.out {

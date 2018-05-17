@@ -87,6 +87,8 @@ function Form_Validator(theForm) {
         //theForm = $('form')[0];
         console.log(theForm);
         console.log(theForm.twn.selectedIndex ) 
+        
+
         if (theForm.twn.selectedIndex < 0)
         //if($('.chosen-choices li').length < 3)
         {
@@ -120,7 +122,7 @@ function Form_Validator(theForm) {
         alert("You must check at least one checkbox.");
         return false;
       }*/
-      
+        
         return (true);
 //  },333)(theForm)
 }
@@ -230,13 +232,16 @@ $(document).ready(function(){
 
 
   $(".chosen").chosen();
-
+/*
   $('select').css({
-    display: "block",
+    /*display: "block",
     opacity: 0,
     top: "1em",
-    position: "absolute"
+    position: "absolute",
+    visibility:"hidden",    
+
   })
+*/
 
 
     /*display: block;
@@ -269,7 +274,19 @@ $(document).ready(function(){
     $('body').removeClass('modal-active');
     setTimeout(function(){$('#formId').submit() }, 333)
   });   */
-  
+
+/*
+    $('#subButton').click(function(e){
+      e.preventDefault()
+      console.log(e)
+      console.log(document.getElementById("formId").action)
+      var targetForm = $('#formId');
+      var urlWithParams = targetForm.attr('action') + "?" + targetForm.serialize();
+      console.log(urlWithParams);
+      
+    })
+    */
+
 
 })
 
